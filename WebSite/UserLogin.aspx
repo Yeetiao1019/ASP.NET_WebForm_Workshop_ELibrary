@@ -36,7 +36,7 @@
                                     <asp:TextBox CssClass="form-control" ID="PasswordTextbox" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="LoginButton" runat="server" Text="Login" />
+                                    <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="LoginButton" runat="server" Text="Login"/>
                                 </div>
                                 <div class="form-group">
                                     <a href="SignupPage.aspx"><input type="button" class="btn btn-info btn-block btn-lg" id="SignUpButton" value="Sign Up" /></a>

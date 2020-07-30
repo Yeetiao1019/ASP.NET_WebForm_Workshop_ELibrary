@@ -31,13 +31,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Full Name</label>
-                                    <asp:TextBox CssClass="form-control" ID="FullNameTextbox" runat="server" placeholder="FullName"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="FullNameTextBox" runat="server" placeholder="FullName"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Date of Birth</label>
-                                    <asp:TextBox CssClass="form-control" ID="BirthTextbox" runat="server" placeholder="Birth" TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="BirthTextBox" runat="server" placeholder="Birth" TextMode="Date"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -45,13 +45,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Contact Number</label>
-                                    <asp:TextBox CssClass="form-control" ID="ContactNumberTextbox" runat="server" placeholder="Contact Number"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="ContactNumberTextBox" runat="server" placeholder="Contact Number"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <asp:TextBox CssClass="form-control" ID="EmailTextbox" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="EmailTextBox" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Pin Code</label>
-                                    <asp:TextBox CssClass="form-control" ID="PinCodeTextbox" runat="server" placeholder="Pin Code"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" ID="PinCodeTextBox" runat="server" placeholder="Pin Code"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="SignUpButton" runat="server" Text="SignUp" />
+                                    <asp:Button CssClass="btn btn-success btn-block btn-lg" ID="SignUpButton" runat="server" Text="SignUp" OnClick="SignUpButton_Click" />
                                 </div>
                             </div>
                         </div>

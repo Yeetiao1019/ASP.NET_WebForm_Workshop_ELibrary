@@ -34,8 +34,13 @@ public partial class UserLogin : System.Web.UI.Page
             {
                 while (dataReader.Read())
                 {
-                    Response.Write("<script>alert('" + dataReader.GetValue(8).ToString()+ "');</script>");
+                    //Response.Write("<script>alert('" + dataReader.GetValue(8).ToString()+ "');</script>");
+                    Session["userName"] = dataReader.GetValue(8).ToString();
+                    Session["fullName"] = dataReader.GetValue(0).ToString();
+                    Session["role"] = "user";
+                    Session["status"] = dataReader.GetValue(10).ToString();
                 }
+                Response.Redirect("HomePage.aspx");
             }
             else
             {

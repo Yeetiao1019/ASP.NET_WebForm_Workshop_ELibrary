@@ -32,8 +32,12 @@ public partial class AdminLogin : System.Web.UI.Page
             {
                 while (dataReader.Read())
                 {
-                    Response.Write("<script>alert('" + dataReader.GetValue(0).ToString() + "');</script>");
+                    //Response.Write("<script>alert('" + dataReader.GetValue(0).ToString() + "');</script>");
+                    Session["userName"] = dataReader.GetValue(0).ToString();
+                    Session["fullName"] = dataReader.GetValue(2).ToString();
+                    Session["role"] = "admin";
                 }
+                Response.Redirect("HomePage.aspx");
             }
             else
             {

@@ -42,7 +42,7 @@ public partial class SignupPage : System.Web.UI.Page
                 conn.Open();
             }
 
-            //INSERT INTO語法 
+            //檢查UserID是否已被建立
             SqlCommand sqlCmd = new SqlCommand("SELECT user_id FROM user_master_table WHERE user_id = '" + UserIDTextBox.Text.Trim() +"';", conn);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCmd);
             DataTable dt = new DataTable();

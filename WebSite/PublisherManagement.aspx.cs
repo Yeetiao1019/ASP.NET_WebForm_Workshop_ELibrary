@@ -69,10 +69,12 @@ public partial class PublisherManagement : System.Web.UI.Page
             }
 
             //檢查AuthorID是否已被建立
-            SqlCommand sqlCmd = new SqlCommand("SELECT publisher_name FROM publisher_master_table WHERE publisher_id = '" + PublisherIDTextBox.Text.Trim() + "';", conn);
+            SqlCommand sqlCmd = new SqlCommand(@"SELECT publisher_name FROM publisher_master_table WHERE publisher_id = @publisher_id", conn); //+ PublisherIDTextBox.Text.Trim() + "';", conn);
+            sqlCmd.Parameters.AddWithValue("publisher_id", PublisherIDTextBox.Text.Trim());
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCmd);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
+            
 
             if (dt.Rows.Count >= 1)
             {
